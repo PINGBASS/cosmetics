@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나스 리디자인</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px 20px;
+    transition: all 0.3s ease;
+    height: 80px; /* 기본 네비게이션 바 높이 */
+}
+
+#logo {
+    font-size: 2rem;
+    font-weight: bold;
+    transition: font-size 0.3s ease;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+}
+
+ul li {
+    margin-left: 20px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    transition: font-size 0.3s ease;
+}
+
+.content {
+    margin-top: 100px; /* 헤더 아래에 컨텐츠 위치시킴 */
+    height: 2000px; /* 예시를 위한 긴 컨텐츠 */
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <div id="logo">나스</div>
+            <ul>
+                <li><a href="#">홈</a></li>
+                <li><a href="#">제품</a></li>
+                <li><a href="#">스토어</a></li>
+                <li><a href="#">고객센터</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="content">
+            <!-- 여기에 페이지 내용 -->
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+<script>
+    window.onscroll = function() {
+    var scrollY = window.scrollY;
+    var logo = document.getElementById('logo');
+    var nav = document.getElementById('navbar');
+    
+    if (scrollY > 100) {
+        logo.style.fontSize = '1.5rem';  // 스크롤 시 로고 크기 줄어듦
+        nav.style.height = '60px';  // 네비게이션 바 높이 줄어듦
+        nav.style.padding = '10px 20px';  // 네비게이션 바 패딩 줄어듦
+    } else {
+        logo.style.fontSize = '2rem';  // 기본 크기
+        nav.style.height = '80px';  // 기본 네비게이션 바 높이
+        nav.style.padding = '20px 20px';  // 기본 패딩
+    }
+};
+
+</script>
+</html>
