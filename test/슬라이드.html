@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <style>
+        .slider-container1 {
+            width: 80%;
+            overflow: hidden;
+            position: relative;
+            margin: 0 auto;
+        }
+        .slider1 {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .slider1 img {
+            width: 25%;
+            
+        }
+        .controls1 {
+            margin-top: 10px;
+            display: flex;
+            justify-content: center;
+        }
+        .button_2{
+            width:40vw;
+            height: 7vh;
+            background:#e6eaf7;
+            border:none;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider-container1">
+        <div class="slider1" id="slider1">
+            <img src="img/950cce5badb26f2c11d8093547351f12.jpg" alt="3">
+            <img src="img/39a29677bee5dd09643978e5c9c28915.jpg" alt="2">
+            <img src="img/950cce5badb26f2c11d8093547351f12.jpg" alt="3">
+            <img src="img/39a29677bee5dd09643978e5c9c28915.jpg" alt="2">
+            <img src="img/950cce5badb26f2c11d8093547351f12.jpg" alt="3">
+            <img src="img/39a29677bee5dd09643978e5c9c28915.jpg" alt="2">
+            <img src="img/950cce5badb26f2c11d8093547351f12.jpg" alt="3">
+            <img src="img/39a29677bee5dd09643978e5c9c28915.jpg" alt="2">
+            <img src="img/950cce5badb26f2c11d8093547351f12.jpg" alt="3">
+            <img src="img/39a29677bee5dd09643978e5c9c28915.jpg" alt="2">
+            <img src="img/950cce5badb26f2c11d8093547351f12.jpg" alt="3">
+            <img src="img/39a29677bee5dd09643978e5c9c28915.jpg" alt="2">
+            <img src="img/950cce5badb26f2c11d8093547351f12.jpg" alt="3">
+            <img src="img/39a29677bee5dd09643978e5c9c28915.jpg" alt="2">
+            <img src="img/950cce5badb26f2c11d8093547351f12.jpg" alt="3">
+            <img src="img/39a29677bee5dd09643978e5c9c28915.jpg" alt="2">
+            
+        </div>
+    </div>
+    <div class="controls1">
+        <button class="button_2" onclick="nextSlide()">Next</button>
+    </div>
+    <script>
+        let index = 0;
+        const images = document.querySelectorAll(".slider1 img");
+        const slider = document.getElementById("slider1");
+        const totalImages = images.length;
+        const visibleCount = 4;
+        const maxClicks = 4; // 총 클릭 횟수 (현재 4번)
+
+        function nextSlide() {
+            index += visibleCount;
+            if (index >= totalImages) {
+                index = 0;
+            }
+            slider.style.transform = `translateX(-${index * 25}%)`;
+        }
+    </script>
+</body>
+</html>

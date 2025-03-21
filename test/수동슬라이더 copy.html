@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  .slider-container {
+  overflow: hidden;
+  width: 100%;
+  max-width: 600px; /* 원하는 슬라이더의 너비 */
+  margin: 0 auto;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.slider img {
+  width: 100%;
+  height: auto;
+}
+
+  </style>
+</head>
+<body>
+  <div class="slider-container">
+    <div class="slider" id="slider">
+      <img src="img/39a29677bee5dd09643978e5c9c28915.jpg" alt="Image 1">
+      <img src="img/950cce5badb26f2c11d8093547351f12.jpg" alt="Image 2">
+      <img src="img/39a29677bee5dd09643978e5c9c28915.jpg" alt="Image 3">
+
+      <img src="img/39a29677bee5dd09643978e5c9c28915.jpg" alt="Image 1">
+      <img src="img/950cce5badb26f2c11d8093547351f12.jpg" alt="Image 2">
+      <img src="img/39a29677bee5dd09643978e5c9c28915.jpg" alt="Image 3">
+      <img src="img/39a29677bee5dd09643978e5c9c28915.jpg" alt="Image 1">
+      <img src="img/950cce5badb26f2c11d8093547351f12.jpg" alt="Image 2">
+      <img src="img/39a29677bee5dd09643978e5c9c28915.jpg" alt="Image 3">
+      <!-- 추가적인 이미지 -->
+    </div>
+  </div>
+  
+
+  <script>
+ const slider = document.getElementById('slider');
+let isMouseDown = false;
+let startX;
+let scrollLeft;
+
+slider.addEventListener('mousedown', (e) => {
+  isMouseDown = true;
+  startX = e.pageX - slider.offsetLeft;
+  scrollLeft = slider.scrollLeft;
+  slider.style.cursor = 'grabbing';  // 드래깅 중에는 'grabbing' 상태로 바꿈
+});
+
+slider.addEventListener('mouseleave', () => {
+  isMouseDown = false;
+  slider.style.cursor = 'grab';  // 마우스를 떠나면 'grab' 상태로 바꿈
+});
+
+slider.addEventListener('mouseup', () => {
+  isMouseDown = false;
+  slider.style.cursor = 'grab';
+});
+
+slider.addEventListener('mousemove', (e) => {
+  if (!isMouseDown) return;
+  e.preventDefault();  // 기본 동작을 방지
+  const x = e.pageX - slider.offsetLeft;
+  const walk = (x - startX) * 2; // 슬라이드 속도를 조절 (기본값은 2로 설정)
+  slider.scrollLeft = scrollLeft - walk;  // scrollLeft를 이용해 슬라이드 이동
+});
+
+
+  </script>
+</body>
+</html>

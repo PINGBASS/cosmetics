@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+footer {
+  background-color: #f8f8f8;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  margin: 0 20px;
+  text-align: left;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.footer-section ul li a:hover {
+  color: #d35400;
+}
+
+.footer-country-language {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.dropbtn {
+  background-color: #f8f8f8;
+  color: #333;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.country-label {
+  margin-left: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.footer-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.footer-right span {
+  margin-right: 20px;
+}
+
+.footer-right a {
+  text-decoration: none;
+  color: #333;
+}
+
+.footer-right a:hover {
+  color: #d35400;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    margin-bottom: 20px;
+  }
+
+  .footer-country-language {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer-right {
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+ 
+
+</style>
+<body>
+    <footer>
+        <div class="footer-container">
+          <!-- About NARS 섹션 -->
+          <div class="footer-section">
+            <h3>ABOUT NARS</h3>
+            <ul>
+              <li><a href="#">About NARS</a></li>
+              <li><a href="#">François Nars</a></li>
+            </ul>
+          </div>
+      
+          <!-- Help & FAQ 섹션 -->
+          <div class="footer-section">
+            <h3>HELP & FAQ</h3>
+            <ul>
+              <li><a href="#">Customer Care</a></li>
+            </ul>
+          </div>
+      
+          <!-- Ways to Shop 섹션 -->
+          <div class="footer-section">
+            <h3>WAYS TO SHOP</h3>
+            <ul>
+              <li><a href="#">What's New</a></li>
+              <li><a href="#">Award Winners</a></li>
+              <li><a href="#">Find a NARS Boutique</a></li>
+            </ul>
+          </div>
+        </div>
+      
+        <div class="footer-all">
+            <div class="footer-country-language">
+          <div class="dropdown">
+            <button class="dropbtn">대한민국</button>
+            <div class="dropdown-content">
+              <a href="#">미국</a>
+              <a href="#">영국</a>
+              <a href="#">프랑스</a>
+              <a href="#">일본</a>
+            
+            </div>
+          </div>
+      
+          <div class="dropdown">
+            <button class="dropbtn">한국어</button>
+            <div class="dropdown-content">
+              <a href="#">영어</a>
+              <a href="#">중국어</a>
+              <a href="#">일본어</a>
+              <a href="#">프랑스어</a>
+         
+            </div>
+          </div>
+          <span class="country-label">국가/지역 선택하기</span>
+            </div>
+      
+     
+            <div class="footer-right">
+          <span>문의하기 080-564-7700</span>
+          <span><a href="#">개인정보처리방침</a> | <a href="#">이용약관</a></span>
+          <span>©2025나스 코스메틱 ALL RIGHTS RESERVED</span>
+            </div>
+        </div>    
+      </footer>
+      
+      
+</body>
+<script>
+    // 드롭다운 메뉴 토글 (기본적으로 CSS만으로 구현 가능)
+document.querySelectorAll('.dropdown').forEach(dropdown => {
+  dropdown.addEventListener('click', (event) => {
+    const dropdownContent = dropdown.querySelector('.dropdown-content');
+    dropdownContent.style.display = dropdownContent.style.display === 'block' ? 'none' : 'block';
+    event.stopPropagation(); // 클릭 이벤트 전파 방지
+  });
+});
+
+// 다른 곳을 클릭하면 드롭다운 닫기
+document.addEventListener('click', () => {
+  document.querySelectorAll('.dropdown-content').forEach(content => {
+    content.style.display = 'none';
+  });
+});
+
+</script>
+</html>

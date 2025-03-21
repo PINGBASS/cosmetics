@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Width Submenu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Arial", sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* 네비게이션 바 */
+        #navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 15px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-menu li {
+            position: relative;
+        }
+
+        /* 메뉴 스타일 */
+        .nav-menu li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1.2rem;
+            font-weight: 600;
+            padding: 15px 30px;
+            display: block;
+            text-align: center;
+            transition: background 0.3s ease;
+        }
+
+        .nav-menu li a:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        /* 서브메뉴 */
+      .submenu {
+    display: none;
+    position: fixed; /* ✅ fixed로 변경 → 화면 전체 기준 */
+    top: 60px; /* ✅ navbar 아래로 위치 조정 */
+    left: 0;
+    width: 100vw; /* ✅ 화면 전체 너비 */
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px 0;
+}
+
+        .submenu li {
+            display: inline-block;
+            padding: 10px 20px;
+        }
+
+        .submenu li a {
+            color: #333;
+            font-size: 1rem;
+            display: block;
+            padding: 10px 15px;
+            transition: background 0.3s ease;
+        }
+
+        .submenu li a:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <ul class="nav-menu">
+            <li>
+                <a href="#" class="menu-link">Menu 1</a>
+                <ul class="submenu">
+                    <li><a href="#">Submenu 1-1</a></li>
+                    <li><a href="#">Submenu 1-2</a></li>
+                    <li><a href="#">Submenu 1-3</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" class="menu-link">Menu 2</a>
+                <ul class="submenu">
+                    <li><a href="#">Submenu 2-1</a></li>
+                    <li><a href="#">Submenu 2-2</a></li>
+                    <li><a href="#">Submenu 2-3</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" class="menu-link">Menu 3</a>
+                <ul class="submenu">
+                    <li><a href="#">Submenu 3-1</a></li>
+                    <li><a href="#">Submenu 3-2</a></li>
+                    <li><a href="#">Submenu 3-3</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" class="menu-link">Menu 4</a>
+                <ul class="submenu">
+                    <li><a href="#">Submenu 4-1</a></li>
+                    <li><a href="#">Submenu 4-2</a></li>
+                    <li><a href="#">Submenu 4-3</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <script>
+        document.querySelectorAll('.menu-link').forEach(menu => {
+            menu.addEventListener('click', function(event) {
+                event.preventDefault();
+                let submenu = this.nextElementSibling;
+
+                // 모든 서브메뉴 숨기기
+                document.querySelectorAll('.submenu').forEach(s => {
+                    if (s !== submenu) s.style.display = 'none';
+                });
+
+                // 클릭한 메뉴의 서브메뉴 토글
+                submenu.style.display = (submenu.style.display === 'block') ? 'none' : 'block';
+            });
+        });
+
+        // 네비게이션 바 외부 클릭 시 서브메뉴 닫기
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.nav-menu > li')) {
+                document.querySelectorAll('.submenu').forEach(submenu => {
+                    submenu.style.display = 'none';
+                });
+            }
+        });
+    </script>
+</body>
+</html>

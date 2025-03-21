@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+ 
+ .slider-container {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  display: flex;
+}
+
+.slide img {
+  width: 25%; /* 4개의 이미지만 보이도록 설정 */
+  object-fit: cover;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.prev-btn {
+  left: 0;
+}
+
+.next-btn {
+  right: 0;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+</style>
+<body>
+  <div class="slider-container">
+    <button class="prev-btn">←</button>
+    <div class="slider">
+      <div class="slide">
+        <img src="img/39a29677bee5dd09643978e5c9c28915.jpg" alt="Image 1">
+        <img src="img/950cce5badb26f2c11d8093547351f12.jpg" alt="Image 2">
+        <img src="img/39a29677bee5dd09643978e5c9c28915.jpg" alt="Image 3">
+        <img src="img/950cce5badb26f2c11d8093547351f12.jpg" alt="Image 4">
+        <img src="img/39a29677bee5dd09643978e5c9c28915.jpg" alt="Image 5">
+        <img src="img/950cce5badb26f2c11d8093547351f12.jpg" alt="Image 6">
+        <img src="img/39a29677bee5dd09643978e5c9c28915.jpg" alt="Image 7">
+        <img src="img/950cce5badb26f2c11d8093547351f12.jpg" alt="Image 8">
+        <img src="img/39a29677bee5dd09643978e5c9c28915.jpg" alt="Image 9">
+        <img src="img/950cce5badb26f2c11d8093547351f12.jpg" alt="Image 10">
+        <img src="img/39a29677bee5dd09643978e5c9c28915.jpg" alt="Image 11">
+        <img src="img/950cce5badb26f2c11d8093547351f12.jpg" alt="Image 12">
+        <img src="img/39a29677bee5dd09643978e5c9c28915.jpg" alt="Image 13">
+        <img src="img/950cce5badb26f2c11d8093547351f12.jpg" alt="Image 14">
+        <img src="img/39a29677bee5dd09643978e5c9c28915.jpg" alt="Image 15">
+        <img src="img/950cce5badb26f2c11d8093547351f12.jpg" alt="Image 16">
+      </div>
+    </div>
+    <button class="next-btn">→</button>
+  </div>
+  
+  
+</body>
+<script>
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+const slider = document.querySelector('.slider');
+const slide = document.querySelector('.slide');
+const images = slide.querySelectorAll('img');
+let currentIndex = 0;
+
+const itemsToShow = 4; // 한번에 보여줄 이미지 개수
+const totalImages = images.length;
+
+// 각 이미지의 너비를 계산하여 슬라이드가 이동할 거리 설정
+const imageWidth = images[0].offsetWidth;
+
+prevBtn.addEventListener('click', () => {
+  if (currentIndex > 0) {
+    currentIndex--;
+  } else {
+    currentIndex = totalImages - itemsToShow; // 처음으로 돌아가게 설정
+  }
+  updateSlider();
+});
+
+nextBtn.addEventListener('click', () => {
+  if (currentIndex < totalImages - itemsToShow) {
+    currentIndex++;
+  } else {
+    currentIndex = 0; // 마지막 이미지에 도달하면 처음으로 돌아가게 설정
+  }
+  updateSlider();
+});
+
+function updateSlider() {
+  const slideWidth = imageWidth * itemsToShow;
+  slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+}
+
+
+</script>
+</html>
