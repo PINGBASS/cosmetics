@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VivaBelle</title>
     <link rel="stylesheet" href="indexDesk.css">
+    <link rel="stylesheet" href="css/indexTablet.css">
+    <link rel="stylesheet" href="css/indexMoblie.css">
+    
   
 </head>
 <body>
@@ -19,31 +22,31 @@
                 <li>
                     <a href="#">Home</a>
                     <ul class="submenu">
-                        <li><a href="#">Submenu 1</a></li>
-                        <li><a href="#">Submenu 2</a></li>
-                        <li><a href="#">Submenu 3</a></li>
-                        <li><a href="#">Submenu 4</a></li>
-                        <li><a href="#">Submenu 5</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Brand Story</a></li>
+                        <li><a href="#">Press & Media </a></li>
+                        <li><a href="#">Events & Collaborations</a></li>
+                        <li><a href="#">Blog & News</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="#">Products</a>
                     <ul class="submenu">
-                        <li><a href="#">Skincare</a></li>
-                        <li><a href="#">Makeup</a></li>
-                        <li><a href="#">Fragrance</a></li>
-                        <li><a href="#">Haircare</a></li>
-                        <li><a href="#">Gift Sets</a></li>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Lip</a></li>
+                        <li><a href="#">Eye</a></li>
+                        <li><a href="#">BLUSHER</a></li>
+                        <li><a href="#">CUSHION</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="#">Store</a>
                     <ul class="submenu">
-                        <li><a href="#">Find a Store</a></li>
-                        <li><a href="#">Online Store</a></li>
-                        <li><a href="#">Special Deals</a></li>
+                        <li><a href="#">Online Shop</a></li>
+                        <li><a href="#">Store Locator</a></li>
                         <li><a href="#">Membership</a></li>
                         <li><a href="#">Gift Cards</a></li>
+                        <li><a href="#">Order Tracking</a></li>
                     </ul>
                 </li>
                 <li>
@@ -74,11 +77,15 @@
                 <div class="content_type1">  
                    
                     <h2 class="content_type2">:&nbsp;VivaBelle</h2>
-                    <p>"미래의 뷰티, 기존의 틀을 깨는 컬러 혁명. <br>
+                    <p class="content_type4">"미래의 뷰티, 기존의 틀을 깨는 컬러 혁명. <br>
                         Vivabelle은 독창적인 감각과 혁신적인 컬러 매치를 제안합니다. <br></gr>
                         이제 당신이 새로운 트렌드입니다."</p>
                         <h4>EST. 2025 | A NEW ERA BEGINS<br>
-                             VivaBelle이 선도합니다.</h4>
+                             VivaBelle이 선도합니다.<br>
+                             
+                        </h4>
+                        <p class="content_type3">©2025벨라 코스메틱 ALL RIGHTS RESERVED</p>
+
                 </div>
             </div>
            
@@ -94,10 +101,10 @@
         <div class="container">
             <div class="image-container">
                 <button class="btn prev" onclick="prevImage()">&#10094;</button>
-                <img src="sample/111_1_1_1_1_1.png" class="active" alt="화장품 이미지">
-                <img src="sample/333.png" alt="화장품1 이미지">
+                <img src="sample/111_1_1_1_1_1_1_2.png" class="active" alt="화장품 이미지">
+                <img src="sample/333_1_1.png" alt="화장품1 이미지">
                 <img src="sample/444.png" alt="화장품2 이미지">
-                <img src="sample/222.png" alt="화장품3 이미지">
+                <img src="sample/222_1_1.png" alt="화장품3 이미지">
               
                 <button class="btn next" onclick="nextImage()">&#10095;</button>
             </div>
@@ -113,7 +120,8 @@
      
        </div>
        <div class="vivatype">NEW</div>
-       <div class="slider-container1">
+       
+    <div class="slider-container1">
         <div class="slider1" id="slider1">
             <img src="img/립/1.jpg" alt="2">
             <img src="img/섀도우/2.jpg" alt="2">
@@ -123,31 +131,23 @@
             <img src="img/마스카라/4.jpg" alt="2">
             <img src="img/섀도우/5.jpg" alt="2">
             <img src="img/섀도우/6.jpg" alt="2">
-            <img src="img/39a29677bee5dd09643978e5c9c28915.jpg" alt="2">
-            <img src="img/950cce5badb26f2c11d8093547351f12.jpg" alt="3">
-            <img src="img/39a29677bee5dd09643978e5c9c28915.jpg" alt="2">
-            <img src="img/950cce5badb26f2c11d8093547351f12.jpg" alt="3">
-            <img src="img/39a29677bee5dd09643978e5c9c28915.jpg" alt="2">
-            <img src="img/950cce5badb26f2c11d8093547351f12.jpg" alt="3">
-            <img src="img/39a29677bee5dd09643978e5c9c28915.jpg" alt="2">
-            
         </div>
     </div>
     <div class="controls1">
         <button class="button_2" onclick="nextSlide()">Next</button>
     </div>
 
-
-
-
        <div class="vivatype">VIVABELLE</div>
+
        <div class="trend_line1">
         <video autoplay loop muted playsinline>
             <source src="img/video/video.mp4" type="video/mp4">
             브라우저가 비디오 태그를 지원하지 않습니다.
         </video>
     </div>
+
     <div class="vivatype">Vivabelle's Pick </div>
+
     <div class="four_img">
         <div class="four_img_type">
             <div class="img_wrap">
@@ -239,6 +239,7 @@
 </footer>
     
     <script>
+        //네비
         window.onscroll = function() {
             var scrollY = window.scrollY;
             var logo = document.getElementById('logo');
@@ -250,7 +251,7 @@
                 nav.style.height = '80px';
                 nav.style.padding = '10px 20px';
                 submenus.forEach(submenu => {
-            submenu.style.top = '105px'; // 작아졌을 때 
+            submenu.style.top = '100px'; // 작아졌을 때 
         });
             } else {
                 logo.style.fontSize = '6rem';
@@ -286,10 +287,10 @@
         });
 
 
+        //네비
 
 
-
-        //
+        //컨테이너 이미지 자동슬라이드
 
 
         const images = document.querySelectorAll(".image-container img");
@@ -320,13 +321,13 @@
         
         setInterval(autoSlide, 3000);
 
-        //수동슬라이드
+        //수동슬라이드 new화장품섹션
         let index = 0;
         const images1 = document.querySelectorAll(".slider1 img");
         const slider = document.getElementById("slider1");
-        const totalImages = images.length;
+        const totalImages = images1.length;
         const visibleCount = 4;
-        const maxClicks = 4; 
+        const maxClicks = 4; // 총 클릭 횟수 (현재 4번)
 
         function nextSlide() {
             index += visibleCount;

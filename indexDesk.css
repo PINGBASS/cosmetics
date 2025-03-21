@@ -1,4 +1,4 @@
-
+@media screen and (min-width:1023px){
 * {
     margin: 0;
     padding: 0;
@@ -11,11 +11,11 @@ body {
 }
 .header_top_sale{
     width:80%;
-    height: 30px;
+    height: 20px;
     background: #c12162;
     position: fixed;
     color:#fff;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     text-align: center;
     font-weight: 400;
     top:0;
@@ -23,7 +23,7 @@ body {
 }
 header {
     position: fixed;
-    top: 0;
+    top: -12px;
     width: 100%;
     z-index: 1000;
     margin-top:1.5vw;
@@ -86,8 +86,8 @@ header {
     display: none;
 position: fixed;
 top: 149px;
-left: 190px;
- width: 80.05%;
+left: 212px;
+ width: 80%;
 background-color: #5029c1;
 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 text-align: center;
@@ -103,12 +103,12 @@ display: inline-block;
 
 .submenu li a {
 font-size: 1rem;
-color: #cfb5b5;
+color: #ffffff;
 transition: color 0.3s ease;
 }
 
 .submenu li a:hover {
-color: #555;
+color: #b7b6b5;
 }
 
 /* 검색창 */
@@ -154,9 +154,11 @@ text-align: center;
   font-size: clamp(1.5rem, 8rem, 20rem);
     color: #3b3fe1;
     font-weight: 300;
-    
-   
-
+}
+.content_type3{
+  font-size: clamp(0.5rem, 0.9rem, 1.2rem);
+  color:#000;
+  margin-left: 4vw;
 }
 h4{
   font-size: 1.2rem;
@@ -166,7 +168,13 @@ h4{
   margin-left: 4vw;
 
 }
-.content_type1 p{
+.content_type1{
+  display:flex;
+  flex-direction: column;
+  gap:0.5vw;
+  
+}
+.content_type4{
     font-size:clamp(1rem,1.2rem,2rem);
     color: #000000;
     font-weight: 300;
@@ -177,7 +185,7 @@ h4{
 /*vivatype*/
 .vivatype{
     font-size: 3rem;
-    color:#000;
+    color:#32302f;
     text-align: center;
     padding:5vw;
     background: #cbcbcb;
@@ -187,7 +195,7 @@ h4{
 /*trand*/
 .trend{
     width:80%;
-    height: 20vh;
+    height: 22vh;
     background:#000;
     margin:0 auto;
     color:#fff;
@@ -201,6 +209,7 @@ h4{
     text-align: center;
     gap: 0.3vw;
 }
+
 .trend_line{
     width:80%;
     height: 5vh;
@@ -320,6 +329,7 @@ margin:0 auto;
   margin-top: 10px;
   display: flex;
   justify-content: center;
+
 }
 .button_2{
   width:40vw;
@@ -541,7 +551,7 @@ footer {
 .image-container {
     position: relative;
     width: 100%;
-    height: 600px;
+    height:727px;
     overflow: hidden;
     margin:0 auto;
 }
@@ -580,3 +590,5 @@ footer {
 
 
 /*자동슬라이드end*/
+
+}
