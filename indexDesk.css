@@ -66,7 +66,7 @@ header {
 .navbar_logo li a {
     text-decoration: none;
     color: #bababa;
-    font-size: clamp(20px, 1.3rem, 1.6rem);
+    font-size: clamp(17px, 0.7rem, 1rem);
     transition: font-size 0.3s ease, color 0.3s ease;
     font-weight: 200;
     padding: 10px;
@@ -141,7 +141,7 @@ text-align: center;
     margin-top: 6vw;
     display:flex;
     gap:5vw;
-    background: #6e6474;
+    background: #cbcbcb;
 }
 .cosmetics_content{
     display:flex;
@@ -152,7 +152,7 @@ text-align: center;
 }
 .content_type2{
   font-size: clamp(1.5rem, 8rem, 20rem);
-    color: #9a9aa7;
+    color: #3b3fe1;
     font-weight: 300;
     
    
@@ -160,15 +160,15 @@ text-align: center;
 }
 h4{
   font-size: 1.2rem;
-  color: #a5a5a5;
-  font-weight: 300;
+  color: #090526;
+  font-weight: 400;
   margin-top: 0.5vw;
   margin-left: 4vw;
 
 }
 .content_type1 p{
     font-size:clamp(1rem,1.2rem,2rem);
-    color: #fff;
+    color: #000000;
     font-weight: 300;
     line-height: 1.5vw;
     margin-left: 4vw;
@@ -180,7 +180,7 @@ h4{
     color:#000;
     text-align: center;
     padding:5vw;
-    background: #6e6474;
+    background: #cbcbcb;
     width:80%;
     margin:0 auto;
 }
@@ -234,7 +234,7 @@ margin:0 auto;
 
 
 .trend_btn:hover {
-    background: #740b0b;
+    background: #f3591a;
 }
 .trend h2{
   font-size: clamp(16px, 1.8rem, 2rem);
@@ -324,11 +324,12 @@ margin:0 auto;
 .button_2{
   width:40vw;
   height: 7vh;
-  background:#6c7595;
+  background:#f3591a;
   border:none;
   margin-bottom: 3vw;
   margin-top: 2.4vw;
   font-size: 1.5rem;
+  color:#fff;
 }
 /* 오버레이 효과 */
 .four_img_type .overlay {
