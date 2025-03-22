@@ -605,7 +605,7 @@
     
     
     /*자동슬라이드end*/
-    .header_top_sale,.content_type3,h4,.trend_line {
+    .header_top_sale,.content_type3,h4,.trend_line,#navbar1{
         display:none;
     }
     }

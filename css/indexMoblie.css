@@ -6,11 +6,14 @@
     }
     html{
         overflow-x: hidden;
+        width:100%;
+        
     }
     body {
         font-family: "Raleway", sans-serif;
         background: #dfdfdf;
         width:100%;
+        overflow-x: hidden;
       
     }
     .header_top_sale{
@@ -26,118 +29,199 @@
         left:10%;
     }
     header {
-        position: fixed;
-        top: -12px;
-        width: 100%;
-        z-index: 1000;
-        margin-top:1.5vw;
-    }
-    
-    #navbar {
+      position: fixed;
+      top: -12px;
+      width: 100%;
+      z-index: 1000;
+      margin-top: 1.5vw;
+  }
+  
+  #navbar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #000000;
+      padding: 20px 20px;
+      transition: all 0.3s ease;
+      height: 130px;
+      width: 100%;
+      margin: 0 auto;
+      position: relative;
+      flex-direction: column;
+  }
+  
+  #logo {
+      font-size: 4rem;
+      font-weight: 400;
+      transition: font-size 0.3s ease;
+      color: #bdbdbd;
+      margin-bottom: 0.5vw;
+  }
+  
+  .navbar_logo {
+    width: 100%;
+    max-width: 100vw;
+      display: flex;
+      list-style-type: none;
+      position: relative;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      box-sizing: border-box;
+       justify-content: center; 
+  }
+  
+  .navbar_logo li {
+      position: relative;
+      padding: 5vw;
+      
+  }
+  
+  .navbar_logo li a {
+      text-decoration: none;
+      color: #bababa;
+      font-size: clamp(16px, 0.6rem, 1rem);
+      transition: font-size 0.3s ease, color 0.3s ease;
+      font-weight: 200;
+      display: block;
+      font-weight: 300;
+  }
+  
+  .navbar_logo li a:hover {
+      color: #ffffff;
+      font-weight: 300;
+      border-radius: 5px;
+  }
+  
+  /* 서브메뉴 스타일 */
+  .submenu {
+    width: 100%;
+    max-width: 100vw;
+      display: none;
+      position: fixed;
+      top: 80px;
+      left: 0;
+      width: 100%;
+      background-color: #5029c1;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      padding: 20px 0;
+  }
+  
+  .submenu li {
+      padding: 10px 15px;
+      display: inline-block;
+  }
+  
+  .submenu li a {
+      font-size: 1rem;
+      color: #ffffff;
+      transition: color 0.3s ease;
+  }
+  
+  .submenu li a:hover {
+      color: #b7b6b5;
+  }
+  
+  /* 검색창 스타일 */
+  #search-bar {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      padding: 15px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+  }
+  
+  #search-input {
+      width: 80%;
+      padding: 10px;
+      font-size: 1.2rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      outline: none;
+  }
+  
+  /* ✅ 모바일 반응형 스타일 (320px ~ 767px) */
+ 
+      /* 네비게이션을 화면에 꽉 차게 만들기 */
+      #navbar {
+          flex-direction: row;
+          justify-content: space-between;
+          padding: 10px 20px;
+          height: 70px;
+      }
+  
+      /* 로고 크기 조절 */
+      #logo {
+          font-size: 2rem;
+          margin: 0;
+      }
+  
+      /* 햄버거 메뉴 아이콘 추가 */
+      .menu-icon {
+          display: block;
+          font-size: 2rem;
+          color: #bdbdbd;
+          cursor: pointer;
+      }
+  
+      /* 기본적으로 네비게이션 숨김 */
+      /* 기본적으로 네비게이션 숨김 */
+.navbar_logo {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* 햄버거 메뉴 클릭 시 네비게이션 보이게 */
+.navbar_logo.active {
+  display: flex;
+}
+
+/* 서브메뉴 스타일 */
+.submenu {
+  position: static;
+  background-color: #5029c1;
+  width: 100%;
+  text-align: center;
+  display: none;
+}
+
+.submenu.active {
+  display: block; /* 서브메뉴 클릭 시 보이게 */
+}
+
+/* 햄버거 메뉴 스타일 */
+.menu-icon {
+  display: block;
+  font-size: 2rem;
+  color: #bdbdbd;
+  cursor: pointer;
+}
+
+/* 검색창 스타일 */
+#search-bar {
+  display: none;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+}
+
+      .submenu.active {
+        display: block; /* 토글 시 보이도록 */
         display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #000000;
-        padding: 20px 20px;
-        transition: all 0.3s ease;
-        height: 130px;
-        width: 100%;
-        margin: 0 auto;
-        position: relative;
-        flex-direction: column;
-       
-    }
-    
-    #logo {
-        font-size: 4rem;
-        font-weight: 400;
-        transition: font-size 0.3s ease;
-        color: #bdbdbd;
-        margin-bottom: 0.5vw;
-        
-    }
-    
-    .navbar_logo {
-        display: flex;
-        list-style-type: none;
-        position: relative;
-        justify-content: flex-end;
-        flex-wrap: wrap;
-    }
-    
-    .navbar_logo li {
-        position: relative;
-        margin-left: 16px;
-    }
-    
-    .navbar_logo li a {
-        text-decoration: none;
-        color: #bababa;
-        font-size: clamp(16px, 0.6rem, 1rem);
-        transition: font-size 0.3s ease, color 0.3s ease;
-        font-weight: 200;
-     
-        display: block;
-        font-weight: 300;
-    }
-    
-    .navbar_logo li a:hover {
-        color: #ffffff;
-        font-weight: 300;
-        
-        border-radius: 5px;
-    }
-    
-    
-    .submenu {
-        display: none;
-    position: fixed;
-    top: 80px;
-    left: 0px;
-     width:100%;
-    background-color: #5029c1;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    padding: 20px 0;
-    }
-    
-    
-    .submenu li {
-    padding: 10px 15px;
-    display: inline-block;
-    }
-    
-    
-    .submenu li a {
-    font-size: 1rem;
-    color: #ffffff;
-    transition: color 0.3s ease;
-    }
-    
-    .submenu li a:hover {
-    color: #b7b6b5;
-    }
-    
-    /* 검색창 */
-    #search-bar {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%; 
-    background-color: #fff;
-    padding: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    }
-    
-    #search-input {
-        width: 80%;
-        padding: 10px;
-        font-size: 1.2rem;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        outline: none;
+;
+    flex-direction: column;
     }
     
     .content {
@@ -156,6 +240,8 @@
     }
     .content_img img{
         width:100%;
+        font-size: 5.75em;
+        margin-top: 26vw;
     }
     .cosmetics_content{
         display:flex;
@@ -449,9 +535,8 @@
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        margin-top: 20px;
         flex-wrap: wrap;
-        
+        gap: 3vw;
       }
       .footer-all{
         display:flex;
@@ -470,7 +555,7 @@
         padding: 10px 20px;
         font-size: 16px;
         cursor: pointer;
-        
+        margin-left: 6vw;
       }
       
       .dropdown-content {

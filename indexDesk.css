@@ -587,7 +587,9 @@ footer {
 .next {
     right: 10px;
 }
-
+#navbar1{
+  display:none;
+}
 
 /*자동슬라이드end*/
 
