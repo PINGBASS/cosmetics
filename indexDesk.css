@@ -4,7 +4,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+a {
+  display: inline-block; 
+}
 body {
     font-family: "Raleway", sans-serif;
     background: #dfdfdf;
@@ -112,26 +114,77 @@ color: #b7b6b5;
 }
 
 /* 검색창 */
-#search-bar {
-display: none;
-position: absolute;
-top: 100%;
-left: 0;
-width: 100%; 
-background-color: #fff;
-padding: 15px;
-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-text-align: center;
-}
 
+
+
+
+
+
+
+
+
+
+
+
+#search-bar {
+    position: absolute;
+    top: 100%;
+    left: 191px;
+    width: 80%;
+    background-color: #515151;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: none;
+    opacity: 0; 
+    transition: opacity 0.3s ease-in-out; 
+}
+#search-icon svg {
+  width: 24px;  
+  height: 24px;
+  fill: #fafafa; 
+}
 #search-input {
     width: 80%;
     padding: 10px;
     font-size: 1.2rem;
-    border: 1px solid #ccc;
+    border: 1px solid #000000;
     border-radius: 5px;
     outline: none;
+    color:#000;
 }
+
+.search-icon {
+    cursor: pointer;
+    font-size: 2rem; /* 아이콘 크기 설정 */
+}
+
+.icon {
+  display: flex
+;
+  justify-content: flex-start;
+  gap: 1vw;
+  margin-left: 8vw;
+}
+
+.icon img{
+  width:2.2vw;
+  opacity: 80%;
+}
+.icon img:hover{
+  width:2.2vw;
+  filter: grayscale(100%) brightness(50%);
+}
+
+
+
+
+
+
+
+
+
+
 
 .content {
     margin-top: 150px;
@@ -301,6 +354,7 @@ margin:0 auto;
     position: relative;
     width: 25%;
     overflow: hidden;
+    height: 75vh;
 }
 
 .four_img_type img {
@@ -357,6 +411,7 @@ margin:0 auto;
     font-size: 1.5rem;
     font-weight: bold;
     transition: opacity 0.3s ease-in-out;
+    height: 75vh;
 }
 
 /* 호버 시 효과 */
@@ -367,6 +422,7 @@ margin:0 auto;
 .four_img_type .img_wrap:hover .overlay {
     opacity: 1;
 }
+
 
 
 
@@ -434,7 +490,7 @@ footer {
   .footer-all{
     display:flex;
     gap: 9.6vw;
-    margin-top: 3vw;
+  
   }
   .dropdown {
     position: relative;

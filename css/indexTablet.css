@@ -608,4 +608,23 @@
     .header_top_sale,.content_type3,h4,.trend_line,#navbar1{
         display:none;
     }
+
+
+    .icon {
+      display: flex
+    ;
+      justify-content: flex-start;
+      gap: 1vw;
+      margin-left: 8vw;
+    }
+    
+    .icon img{
+      width:2.2vw;
+      opacity: 80%;
+    }
+    .icon img:hover{
+      width:2.2vw;
+      filter: grayscale(100%) brightness(50%);
+    }
+    
     }

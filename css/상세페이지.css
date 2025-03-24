@@ -1,0 +1,151 @@
+.product-detail {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    justify-content: center;
+}
+
+.image-indicators {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  
+}
+.content_img img{
+    width:100%;
+}
+.indicator {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 10px 0;
+    transition: background-color 0.3s;
+}
+
+.product-images {
+    width: 50%;
+    height: 900px;
+    overflow-y: scroll;
+    position: sticky;
+    top: 50px; 
+}
+
+.product-images img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product-description {
+    width: 40%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-description h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.product-description .reference,
+.product-description .price {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.product-description .details-link {
+    color: #007bff;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+.product-line{
+    width:70%;
+    height: 1.5px;
+    background-color:#000;
+
+}
+.color-selection {
+    margin-bottom: 20px;
+}
+
+.color-selection .colors {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.color-selection .color {
+    width: 40px;
+    height: 40px;
+  
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.color-selection .color:hover {
+    transform: scale(1.2);
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.add-to-cart, .add-to-wishlist {
+    padding: 15px;
+    font-size: 1.2rem;
+    border:1px solid#000;
+    
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 60%;
+}
+
+.add-to-cart {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+}
+
+.add-to-cart:hover {
+    background-color: #ffffff;
+}
+
+.add-to-wishlist {
+    background-color: #ffc107;
+    color: white;
+}
+
+.add-to-wishlist:hover {
+    background-color: #e0a800;
+}
+
+
+.wishlist-message, .cart-message {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    display: none;
+}
+.wishlist-icon1 {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    fill: #ccc;  
+    transition: fill 0.3s ease;}
+
+.wishlist-icon1.active {
+    fill: gold; 
+}

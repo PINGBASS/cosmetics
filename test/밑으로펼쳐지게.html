@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .product-info {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.tabs-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tabs {
+  display: flex;
+}
+
+.tab-button {
+  padding: 10px;
+  margin-right: 10px;
+  background-color: #f1f1f1;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.tab-button:hover {
+  background-color: #ddd;
+}
+
+.arrow {
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.tab-content {
+  display: none;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  margin-top: 10px;
+}
+
+.tab-button.active {
+  background-color: #ddd;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+    </style>
+</head>
+<body>
+    <div class="product-info">
+        <h2>제품 정보</h2>
+        <div class="tabs-container">
+          <div class="tabs">
+            <button class="tab-button" onclick="toggleTab('description')">상품 설명</button>
+            <button class="tab-button" onclick="toggleTab('ingredients')">전 성분</button>
+            <button class="tab-button" onclick="toggleTab('usage')">사용 방법</button>
+          </div>
+          <div class="arrow" onclick="toggleContent()">→</div>
+        </div>
+        <div id="description" class="tab-content">
+          <p>상품 설명 내용...</p>
+        </div>
+        <div id="ingredients" class="tab-content">
+          <p>전 성분 내용...</p>
+        </div>
+        <div id="usage" class="tab-content">
+          <p>사용 방법 내용...</p>
+        </div>
+      </div>
+      
+</body>
+<script>
+    let contentVisible = false;
+
+function toggleTab(tabName) {
+  // 모든 탭 내용을 숨김
+  const contents = document.querySelectorAll('.tab-content');
+  contents.forEach(content => content.classList.remove('active'));
+
+  // 탭 버튼 활성화
+  const buttons = document.querySelectorAll('.tab-button');
+  buttons.forEach(button => button.classList.remove('active'));
+
+  // 선택된 탭 내용만 보이게
+  document.getElementById(tabName).classList.add('active');
+  event.target.classList.add('active');
+}
+
+function toggleContent() {
+  const contentSections = document.querySelectorAll('.tab-content');
+
+  if (contentVisible) {
+    contentSections.forEach(section => section.classList.remove('active'));
+  } else {
+    contentSections.forEach(section => section.classList.add('active'));
+  }
+  
+  contentVisible = !contentVisible;
+}
+
+</script>
+</html>

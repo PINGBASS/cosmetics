@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .product-info {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.info-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-box {
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.box-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.arrow {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.box-content {
+  display: none;
+  padding: 10px;
+  background-color: #fafafa;
+}
+
+.box-header:hover {
+  background-color: #ddd;
+}
+
+.box-content p {
+  margin: 0;
+}
+
+    </style>
+</head>
+<body>
+    <div class="product-info">
+        <h2>제품 정보</h2>
+        <div class="info-section">
+          <div class="info-box">
+            <div class="box-header">
+              <h3>상품 설명</h3>
+              <span class="arrow" onclick="toggleBox('description')">→</span>
+            </div>
+            <div id="description" class="box-content">
+              <p>상품 설명 내용...</p>
+            </div>
+          </div>
+          <div class="info-box">
+            <div class="box-header">
+              <h3>전 성분</h3>
+              <span class="arrow" onclick="toggleBox('ingredients')">→</span>
+            </div>
+            <div id="ingredients" class="box-content">
+              <p>전 성분 내용...</p>
+            </div>
+          </div>
+          <div class="info-box">
+            <div class="box-header">
+              <h3>사용 방법</h3>
+              <span class="arrow" onclick="toggleBox('usage')">→</span>
+            </div>
+            <div id="usage" class="box-content">
+              <p>사용 방법 내용...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+</body>
+<script>
+    function toggleBox(boxId) {
+  const boxContent = document.getElementById(boxId);
+  
+  // 현재 열린 상태라면 숨기고, 아니면 보여주기
+  if (boxContent.style.display === 'block') {
+    boxContent.style.display = 'none';
+  } else {
+    boxContent.style.display = 'block';
+  }
+}
+
+</script>
+</html>

@@ -203,7 +203,7 @@
 /* 햄버거 메뉴 스타일 */
 .menu-icon {
   display: block;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #bdbdbd;
   cursor: pointer;
 }
@@ -702,4 +702,64 @@
     .header_top_sale,.content_type3,h4,.trend_line,.trend p,.prev,.next {
         display:none;
     }
+
+    #search-bar {
+      position: absolute;
+      top: 100%;
+     
+      width: 100%;
+      background-color: #515151;
+      padding: 15px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      display: none;
+      opacity: 0; 
+      transition: opacity 0.3s ease-in-out; 
+  }
+  #search-icon svg {
+    width: 22px;  
+    height: 22px;
+    fill: #fafafa; 
+  }
+  #search-input {
+      width: 80%;
+      padding: 10px;
+      font-size: 1.2rem;
+      border: 1px solid #000000;
+      border-radius: 5px;
+      outline: none;
+      color:#000;
+  }
+  
+  .search-icon {
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      margin-top: 2.5vw;
+      gap: 0vw;
+      margin-left: 1vw;
+  }
+  
+  .icon {
+    display: flex
+  ;
+    justify-content: flex-start;
+    gap: 1vw;
+    margin-left: 8vw;
+  }
+  
+  .icon img{
+    width:2.2vw;
+    opacity: 80%;
+  }
+  .icon img:hover{
+    width:2.2vw;
+    filter: grayscale(100%) brightness(50%);
+  }
+  
+
+
+
+
+
     }

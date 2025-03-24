@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tab-content {
+  display: none;
+}
+
+.tab-button {
+  padding: 10px;
+  background-color: #f1f1f1;
+  border: none;
+  cursor: pointer;
+}
+
+.tab-button:hover {
+  background-color: #ddd;
+}
+
+    </style>
+</head>
+<body>
+    <div class="tabs">
+        <button class="tab-button" onclick="showTab('description')">상품 설명</button>
+        <button class="tab-button" onclick="showTab('ingredients')">전 성분</button>
+        <button class="tab-button" onclick="showTab('usage')">사용 방법</button>
+      </div>
+      
+      <div id="description" class="tab-content">
+        <p>상품 설명 내용...</p>
+      </div>
+      <div id="ingredients" class="tab-content">
+        <p>전 성분 내용...</p>
+      </div>
+      <div id="usage" class="tab-content">
+        <p>사용 방법 내용...</p>
+      </div>
+</body>
+<script>
+    function showTab(tabName) {
+  const contents = document.querySelectorAll('.tab-content');
+  contents.forEach(content => content.style.display = 'none');
+  
+  const buttons = document.querySelectorAll('.tab-button');
+  buttons.forEach(button => button.style.backgroundColor = '#f1f1f1');
+  
+  document.getElementById(tabName).style.display = 'block';
+  event.target.style.backgroundColor = '#ddd';  // 선택된 버튼 강조
+}
+
+</script>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.product-info {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.info-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-box {
+  width: 100%;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.box-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  position: relative;
+}
+
+
+
+.box-content {
+  display: none;
+  padding: 10px;
+  background-color: #fafafa;
+}
+
+.box-header:hover {
+  background-color: #ddd;
+}
+
+.box-content p {
+  margin: 0;
+}
+
+
+.box-header.active {
+  background-color: #414141; 
+  color: white; 
+}
+
+.box-content.active {
+  background-color: #414141; 
+}
+    </style>
+</head>
+<body>
+    <div class="product-info">
+        <h2>제품 정보</h2>
+        <div class="info-section">
+          <div class="info-box">
+            <div class="box-header" onclick="toggleContent('description', this)">
+              <h3>상품 설명</h3>
+              
+            </div>
+            <div id="description" class="box-content">
+              <p>상품 설명 내용...</p>
+            </div>
+          </div>
+          <div class="info-box">
+            <div class="box-header" onclick="toggleContent('ingredients', this)">
+              <h3>전 성분</h3>
+              
+            </div>
+            <div id="ingredients" class="box-content">
+              <p>전 성분 내용...</p>
+            </div>
+          </div>
+          <div class="info-box">
+            <div class="box-header" onclick="toggleContent('usage', this)">
+              <h3>사용 방법</h3>
+              
+            </div>
+            <div id="usage" class="box-content">
+              <p>사용 방법 내용...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+</body>
+<script>
+// 바깥을 클릭하여 열린 박스 닫기
+document.addEventListener('click', function(event) {
+  const isClickInside = event.target.closest('.info-box');
+  
+  if (!isClickInside) {
+    const allContents = document.querySelectorAll('.box-content');
+    const allCircles = document.querySelectorAll('.circle');
+    const allHeaders = document.querySelectorAll('.box-header');
+
+    allContents.forEach(content => content.style.display = 'none');
+    allCircles.forEach(circle => {
+      circle.classList.remove('open');  //꽉 찬 동그라미 상태 제거
+      circle.classList.add('empty');   //빈 동그라미 상태 추가
+    });
+    allHeaders.forEach(header => {
+      header.classList.remove('active');  // 버튼색 원래상태로 
+    });
+  }
+});
+
+// 설명토글
+function toggleContent(contentId, boxHeader) {
+  const boxContent = document.getElementById(contentId);
+  
+  // 모든 창을 숨기고,클릭한 창만 열기
+  const allContents = document.querySelectorAll('.box-content');
+  const allHeaders = document.querySelectorAll('.box-header');
+  allContents.forEach(content => {
+    content.style.display = 'none';
+  });
+
+  // 클릭된창만 열리고 색상변경
+  if (boxContent.style.display === 'block') {
+    boxContent.style.display = 'none';
+    boxHeader.classList.remove('active');  //색원래대로
+  } else {
+    //색상리셋
+    allHeaders.forEach(header => header.classList.remove('active'));
+    boxHeader.classList.add('active');  //클릭된 항목 색상 변경
+    boxContent.style.display = 'block';
+  }
+}
+
+
+
+</script>
+</html>

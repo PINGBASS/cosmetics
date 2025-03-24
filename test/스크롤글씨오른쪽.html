@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .product-detail {
+            display: flex;
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            justify-content: space-between; /* 왼쪽과 오른쪽 공간을 분리 */
+        }
+
+        .product-images {
+            width: 50%;
+            height: 900px;
+            overflow-y: auto;
+        }
+
+        .product-images img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .product-description {
+            width: 40%;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .product-description h1 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .product-description .reference,
+        .product-description .price {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .product-description .details-link {
+            color: #007bff;
+            text-decoration: none;
+            margin-bottom: 20px;
+        }
+
+        .product-line {
+            width: 70%;
+            height: 1.5px;
+            background-color: #000;
+        }
+
+        .color-selection {
+            margin-bottom: 20px;
+        }
+
+        .color-selection .colors {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .color-selection .color {
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .color-selection .color:hover {
+            transform: scale(1.2);
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+
+        .add-to-cart,
+        .add-to-wishlist {
+            padding: 15px;
+            font-size: 1.2rem;
+            border: 1px solid #000;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 60%;
+        }
+
+        .add-to-cart {
+            background-color: #ffffff;
+            color: rgb(0, 0, 0);
+        }
+
+        .add-to-cart:hover {
+            background-color: #ffffff;
+        }
+
+        .add-to-wishlist {
+            background-color: #ffc107;
+            color: white;
+        }
+
+        .add-to-wishlist:hover {
+            background-color: #e0a800;
+        }
+
+        .wishlist-message,
+        .cart-message {
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            background-color: #ffffff;
+            color: #000000;
+            border: 1px solid #000000;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            display: none;
+        }
+
+        .wishlist-icon1 {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            fill: #ccc;
+            transition: fill 0.3s ease;
+        }
+
+        .wishlist-icon1.active {
+            fill: gold;
+        }
+
+        /* 스크롤을 오른쪽에 추가 */
+        .scroll-wrapper {
+            position: absolute;
+            top: 0;
+            right: -20px;
+            width: 20px;
+            height: 100%;
+            background-color: transparent;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <section class="product-detail">
+        <!-- 이미지 영역 왼쪽 -->
+        <div class="product-images">
+            <img src="../img/립/1.jpg" alt="Lipstick Image 1">
+            <img src="../img/립/2.jpg" alt="Lipstick Image 2">
+            <img src="../img/립/10.jpg" alt="Lipstick Image 3">
+        </div>
+
+        <!-- 설명 영역 오른쪽 -->
+        <div class="product-description">
+            <h1>루쥬 알뤼르 벨벳 레 뻬를르<br>리미티드 에디션 - 루미너스 매트 립 컬러</h1>
+            <div class="product-line"></div>
+            <p class="reference">레퍼런스 151447</p>
+            <p class="price">63,000 원
+                <span class="wishlist-icon " aria-label="Add to wishlist">&#9733;</span>
+            </p>
+            <div class="product-line"></div>
+            <a href="#" class="details-link">자세히 보기</a>
+
+            <div class="color-selection">
+                <label>컬러 선택:</label>
+                <div class="colors">
+                    <div class="color" style="background-color: rgb(167, 28, 28);" data-color="red"></div>
+                    <div class="color" style="background-color: rgb(100, 5, 21);" data-color="pink"></div>
+                    <div class="color" style="background-color: rgb(41, 1, 1);" data-color="beige"></div>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button class="add-to-cart">장바구니에 추가</button>
+            </div>
+
+            <!-- 스크롤 영역 추가 -->
+            <div class="scroll-wrapper">
+                <div class="product-images" style="height: 900px; overflow-y: scroll;">
+                    <img src="../img/립/1.jpg" alt="Lipstick Image 1">
+                    <img src="../img/립/2.jpg" alt="Lipstick Image 2">
+                    <img src="../img/립/10.jpg" alt="Lipstick Image 3">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="wishlist-message" style="display:none;">
+        위시리스트에 추가되었습니다.
+    </div>
+
+    <div class="cart-message" style="display:none;">
+        장바구니에 추가되었습니다.
+    </div>
+
+    <section class="product-detail_2">
+        dfsdfsdfsdf
+    </section>
+
+</body>
+<script>
+    const images1 = document.querySelectorAll('.product-images img');
+    const indicators = document.querySelectorAll('.indicator');
+
+    let currentIndex1 = 0;
+
+    // 동그라미 색상 변경
+    document.querySelector('.product-images').addEventListener('scroll', () => {
+        const scrollPosition = document.querySelector('.product-images').scrollTop;
+        const imageHeight = images1[0].clientHeight;
+
+        const index = Math.floor(scrollPosition / imageHeight);
+
+        if (index !== currentIndex1) {
+            indicators[currentIndex].style.backgroundColor = '#ccc';
+            indicators[index].style.backgroundColor = '#999';
+            currentIndex1 = index;
+        }
+    });
+
+    // 메시지 띄우기
+    const wishlistIcon = document.querySelector('.wishlist-icon');
+    const wishlistMessage = document.querySelector('.wishlist-message');
+
+    wishlistIcon.addEventListener('click', () => {
+        wishlistMessage.style.display = 'block';
+        setTimeout(() => {
+            wishlistMessage.style.display = 'none';
+        }, 3000);
+    });
+
+    // 장바구니
+    const addToCartButton = document.querySelector('.add-to-cart');
+    const cartMessage = document.querySelector('.cart-message');
+
+    addToCartButton.addEventListener('click', () => {
+        cartMessage.style.display = 'block';
+        setTimeout(() => {
+            cartMessage.style.display = 'none';
+        }, 3000);
+    });
+
+    const wishlistIcon1 = document.querySelector('.wishlist-icon1');
+
+    // 클릭 시 색상 변경
+    wishlistIcon.addEventListener('click', () => {
+        wishlistIcon.classList.toggle('active'); // 클릭 시 .active 클래스를 토글하여 색상 변경
+    });
+</script>
+</html>
