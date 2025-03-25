@@ -611,15 +611,15 @@
 
 
     .icon {
-      display: flex
-    ;
+      display: flex;
+      width:100%;
       justify-content: flex-start;
       gap: 1vw;
-      margin-left: 8vw;
+      justify-content: center;
     }
     
     .icon img{
-      width:2.2vw;
+      width:6.2vw;
       opacity: 80%;
     }
     .icon img:hover{

@@ -88,7 +88,7 @@ header {
     display: none;
 position: fixed;
 top: 147px;
-left: 212px;
+left: 191px;
  width: 80%;
 background-color: #5029c1;
 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -129,7 +129,7 @@ color: #b7b6b5;
 #search-bar {
     position: absolute;
     top: 100%;
-    left: 212px;
+    left: 191px;
     width: 80%;
     background-color: #515151;
     padding: 15px;
@@ -212,6 +212,7 @@ color: #b7b6b5;
   font-size: clamp(0.5rem, 0.9rem, 1.2rem);
   color:#000;
   margin-left: 4vw;
+  
 }
 h4{
   font-size: 1.2rem;

@@ -9,7 +9,7 @@
 
     if (scrollY > 100) {
         logo.style.fontSize = '4rem';
-        nav.style.height = '80px';
+        nav.style.height = '108px';
         nav.style.padding = '10px 20px';
     } else {
         logo.style.fontSize = '6rem';

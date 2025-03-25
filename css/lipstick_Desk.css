@@ -31,8 +31,10 @@
         z-index: 1000;
         margin-top:1.5vw;
     }
-    
-    
+    .submenu {
+      background-color:  #661ce8 !important;
+    }
+   
     
 /*content*/
 .content {
@@ -262,14 +264,14 @@ footer {
 .lipstick-container {
     width: 100%;
     margin: 0 auto;
-    max-width: 1200px; /* 최대 너비 설정 */
+    max-width: 1200px;
 }
 
 .lipstick-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4개의 칸을 가로로 배치 */
-    gap: 20px; /* 아이템 간 간격 */
-    grid-template-rows: repeat(7, auto); /* 세로로 7줄 정도 */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px; 
+    grid-template-rows: repeat(9, auto); 
 }
 
 .lipstick-item {
@@ -284,7 +286,7 @@ footer {
 }
 
 .lipstick-item:hover img {
-    transform: scale(1.1); /* 이미지에 호버 효과 */
+    transform: scale(1.1); 
 }
 
 
@@ -319,108 +321,112 @@ footer {
     margin-top: 20px;
 }
 
-/* 각 립스틱 아이템 */
+
 .lipstick-item {
     text-align: center;
     width:100%;
-    height: 43vh;
+    height: 52vh;
 }
 
-/* 이미지 영역 */
+.lipstick-image{
+  width:100%
+}
 .lipstick-image img {
     width: 100%;
     height: auto;
     display: block;
-    height: 28vh;
+    height: 29vh;
+}
+.lipstick_name_color{
+  margin-top:1.7vw;
 }
 
-/* 립스틱 정보 영역 */
 .lipstick-info {
     margin-top: 34px;
 }
 
-/* 라인 */
+
 .lipstick-line {
     border-top: 2px solid #000;
     margin-bottom: 10px;
+    display:none;
 }
 
-/* "New" 텍스트 */
+
 .new-text {
     font-size: 14px;
-    color: #ff0000;  /* 빨간색 */
+    color: #ff0000;  
     font-weight: bold;
     background: #20030b;
     height: 4vh;
-    /* width: 9vw; */
+ 
     color: #ffffff;
     line-height: 1.8vw;
 }
 
-/* 립스틱 이름 */
+
 .lipstick-name {
     font-size: 16px;
     font-weight: bold;
     margin-bottom: 5px;
 }
 
-/* 립스틱 컬러 */
+
 .lipstick-color {
     font-size: 14px;
-    color: #666;  /* 그레이 색상 */
+    color: #666;  
 }
 
-/* 필터 영역 */
+
 .filters {
     display: flex;
     justify-content: space-between;
     margin: 20px 0;
     padding: 0 20px;
-    flex-wrap: wrap;  /* 화면이 좁을 때 줄바꿈이 되도록 */
+    flex-wrap: wrap;  
     justify-content: center;
     margin-top: 4.1vw;
     margin-bottom: 4.2vw;
 }
 
-/* 필터의 각 항목 */
 .filter {
     display: flex;
-    flex-direction: row;  /* 가로로 배열 */
+    flex-direction: row; 
     align-items: center;
-    margin-right: 30px;  /* 항목 간 간격 */
+    margin-right: 30px;  
 }
 
-/* 필터 항목의 텍스트 */
+
 .filter label {
     font-size: 18px;
-    margin-right: 10px;  /* 텍스트와 버튼 사이 간격 */
+    margin-right: 10px; 
     font-weight: bold;
 }
 
-/* 필터 버튼 스타일 */
+
 .filter-button {
     background-color: transparent;
-    border: 2px solid #000;  /* 기본 버튼 테두리 색 */
+    border: 2px solid #000;  
     padding: 10px 20px;
     font-size: 16px;
-    color: #000;  /* 기본 글자 색 */
+    color: #000; 
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
-/* 버튼 hover 시 스타일 */
+
 .filter-button:hover {
     background-color: #000;
     color: #fff;
 }
 
-/* 버튼 클릭 상태 (선택된 색상) */
+
 .filter-button.active {
     background-color: #000;
     color: #fff;
 }
 
-/* 버튼 선택된 상태를 위한 추가 스타일 */
+
 .filter-button[data-color="pink"].active {
     border-color: pink;
 }

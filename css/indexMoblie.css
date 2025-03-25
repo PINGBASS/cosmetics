@@ -146,6 +146,9 @@
   
   /* ✅ 모바일 반응형 스타일 (320px ~ 767px) */
  
+
+
+
       /* 네비게이션을 화면에 꽉 차게 만들기 */
       #navbar {
           flex-direction: row;
@@ -351,7 +354,7 @@
     }
     .trend h2{
       font-size: clamp(16px, 1.4rem, 2rem);
-        font-weight: 400;
+        font-weight: 600;
         color: #000000;
     }
     /*new_viva*/
@@ -587,6 +590,7 @@
         margin-left: 10px;
         font-size: 14px;
         color: #e4e4e4;
+        margin-top: 1.5vw;
       }
       
       .footer-right {
@@ -600,6 +604,7 @@
       .footer-right span {
         margin-right: 20px;
         color: #fff;
+        font-size: 0.6rem;
       }
       
       .footer-right a {
@@ -618,7 +623,7 @@
         }
       
         .footer-section {
-          margin-bottom: 20px;
+          margin-bottom: 13px;
         }
       
         .footer-country-language {
@@ -629,7 +634,8 @@
         .footer-right {
           justify-content: center;
           text-align: center;
-          margin-top: 20px;
+          margin-top: 10px;
+          margin-left: 7vw;
         }
       }
     
@@ -740,18 +746,19 @@
       margin-left: 1vw;
   }
   
-  .icon {
-    display: flex
-  ;
-    justify-content: flex-start;
-    gap: 1vw;
-    margin-left: 8vw;
-  }
-  
-  .icon img{
-    width:2.2vw;
-    opacity: 80%;
-  }
+.icon {
+      display: flex;
+      width:100%;
+      justify-content: flex-start;
+      gap: 1vw;
+      justify-content: center;
+    }
+    
+    .icon img{
+      width: 9.2vw;
+      opacity: 80%;
+      margin-bottom: 4vw;
+    }
   .icon img:hover{
     width:2.2vw;
     filter: grayscale(100%) brightness(50%);
