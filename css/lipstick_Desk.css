@@ -350,7 +350,7 @@ footer {
     font-size: 14px;
     color: #ff0000;  /* 빨간색 */
     font-weight: bold;
-    background: #333;
+    background: #20030b;
     height: 4vh;
     /* width: 9vw; */
     color: #ffffff;
@@ -378,7 +378,8 @@ footer {
     padding: 0 20px;
     flex-wrap: wrap;  /* 화면이 좁을 때 줄바꿈이 되도록 */
     justify-content: center;
-    margin-top: 5.4vw;
+    margin-top: 4.1vw;
+    margin-bottom: 4.2vw;
 }
 
 /* 필터의 각 항목 */
