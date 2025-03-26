@@ -269,7 +269,7 @@ h4{
 .lipstick-item {
     text-align: center;
     width:100%;
-    height:47vh;
+    height:43vh;
 }
 
 
@@ -302,7 +302,10 @@ h4{
     color: #ffffff;
     line-height: 6.8vw;
 }
-
+.filter p{
+    margin-right: 11vw;
+    margin-top: 4vw;
+}
 
 .lipstick-name {
     font-size: 16px;
@@ -312,6 +315,7 @@ h4{
 .filters h2{
     font-size: 4rem;
     margin-bottom: 5vw;
+    margin-left: 22vw;
 }
 .fillters p{
     margin-top: 2vw;
@@ -320,34 +324,26 @@ h4{
     font-size: 14px;
     color: #666;  
 }
-
-
 .filters {
     display: flex;
     justify-content: space-between;
     margin: 25px 0;
     padding: 0 20px;
     flex-wrap: wrap; 
-    justify-content: center;
     margin-top: 5.4vw;
+    justify-content: space-between
 }
-
-
 .filter {
     display: flex;
     align-items: center;
-     flex-wrap: wrap;
-     justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-around
 }
-
-
 .filter label {
     font-size: 18px;
     margin-right: 10px; 
     font-weight: bold;
 }
-
-
 .filter-button {
     background-color: transparent;
     border: 2px solid #000;  
@@ -357,40 +353,27 @@ h4{
     cursor: pointer;
     transition: all 0.3s ease;
 }
-
-
 .filter-button:hover {
     background-color: #000;
     color: #fff;
 }
-
-
 .filter-button.active {
     background-color: #000;
     color: #fff;
 }
-
-
 .filter-button[data-color="pink"].active {
     border-color: pink;
 }
-
 .filter-button[data-color="red"].active {
     border-color: red;
 }
-
 .filter-button[data-color="purple"].active {
     border-color: purple;
 }
-
-
-
 .icon{
     display:flex;
-   
     gap:2vw;
-    justify-content: center
-   
+    justify-content: center;
 }
 .icon img{
     width:8.2vw;
