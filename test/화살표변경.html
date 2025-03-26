@@ -120,21 +120,21 @@ document.addEventListener('click', function(event) {
 function toggleContent(contentId, boxHeader) {
   const boxContent = document.getElementById(contentId);
   
-  // 모든 창을 숨기고,클릭한 창만 열기
+  // 모든창을숨기고클릭한창만 열기
   const allContents = document.querySelectorAll('.box-content');
   const allHeaders = document.querySelectorAll('.box-header');
   allContents.forEach(content => {
     content.style.display = 'none';
   });
 
-  // 클릭된창만 열리고 색상변경
+  // 클릭된창만열리고색상변경
   if (boxContent.style.display === 'block') {
     boxContent.style.display = 'none';
-    boxHeader.classList.remove('active');  //색원래대로
+    boxHeader.classList.remove('active');  //색원래
   } else {
     //색상리셋
     allHeaders.forEach(header => header.classList.remove('active'));
-    boxHeader.classList.add('active');  //클릭된 항목 색상 변경
+    boxHeader.classList.add('active');  //클릭색상 변경
     boxContent.style.display = 'block';
   }
 }

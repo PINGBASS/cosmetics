@@ -69,6 +69,7 @@
         display: flex;
         flex-direction: row;
     align-items: center;
+    display: none;
     }
     
     .navbar_logo li {
@@ -109,7 +110,7 @@
     background-color: #e7690c;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
-    padding: 20px 0;
+    
     }
     
     
@@ -120,9 +121,9 @@
     
     
     .submenu li a {
-    font-size: 1rem;
-    color: #ffffff;
-    transition: color 0.3s ease;
+   font-size: 1.5em;
+        margin-bottom: 36px;
+        margin-top: 6vw;
     }
     
     .submenu li a:hover {
@@ -274,7 +275,7 @@ h4{
 .lipstick-item {
     text-align: center;
     width:100%;
-    height:40vh;
+    height:47vh;
 }
 
 
@@ -305,7 +306,7 @@ h4{
     height: 4vh;
     /* width: 9vw; */
     color: #ffffff;
-    line-height: 1.8vw;
+    line-height: 6.8vw;
 }
 
 
@@ -314,8 +315,13 @@ h4{
     font-weight: bold;
     margin-bottom: 5px;
 }
-
-
+.filters h2{
+    font-size: 4rem;
+    margin-bottom: 5vw;
+}
+.fillters p{
+    margin-top: 2vw;
+}
 .lipstick-color {
     font-size: 14px;
     color: #666;  
@@ -325,7 +331,7 @@ h4{
 .filters {
     display: flex;
     justify-content: space-between;
-    margin: 20px 0;
+    margin: 25px 0;
     padding: 0 20px;
     flex-wrap: wrap; 
     justify-content: center;
@@ -337,7 +343,7 @@ h4{
     display: flex;
     align-items: center;
      flex-wrap: wrap;
-    
+     justify-content: center;
 }
 
 
@@ -351,7 +357,7 @@ h4{
 .filter-button {
     background-color: transparent;
     border: 2px solid #000;  
-    padding: 10px 20px;
+    padding: 8px 20px;
     font-size: 16px;
     color: #000; 
     cursor: pointer;
@@ -387,12 +393,13 @@ h4{
 
 .icon{
     display:flex;
-    justify-content: flex-start;
-    gap:1vw;
-    margin-left:8vw;
+   
+    gap:2vw;
+    justify-content: center
+   
 }
 .icon img{
-    width:2.2vw;
+    width:8.2vw;
     opacity: 80%;
 }
 .icon img:hover{
@@ -400,15 +407,4 @@ h4{
     filter: grayscale(100%) brightness(50%);
 }
 
-
-
-
-
-
-
-
-
-.menu-icon{
-    display:none;
-}
 }

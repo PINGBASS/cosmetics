@@ -1,5 +1,5 @@
 
-@media screen and (min-width:1023px){
+@media screen and  (min-width:768px) and (max-width:1022px){
 .content_img img{
     width:100%;
 }
@@ -11,7 +11,7 @@
     font-weight: 500;
 }
 .product-info {
-    width: 80%;
+   
     margin: 0 auto;
     text-align: center;
     background-color: #f1f1f1;
@@ -78,11 +78,11 @@
 
 .product-detail {
     display: flex;
-    width: 80%;
     margin: 0 auto;
     justify-content: center;
-    margin-top: 7.5vw;
+    margin-top: 14.5vw;
     background-color: #f4f4f4 ;
+    height: 65vh;
 }
 .image-indicators {
     display: flex;
@@ -99,7 +99,7 @@
 }
 .product-images {
     width: 50%;
-    height: 900px;
+    height: 669px;
     overflow-y: scroll; 
 }
 .product-images img {
@@ -119,8 +119,8 @@
 }
 
 .product-description h1 {
-    font-size: 2.42em;
-    margin-bottom: 84px;
+    font-size: 2em;
+    margin-bottom: 36px;
 }
 
 .product-description .reference,
@@ -175,7 +175,7 @@
 
 .add-to-cart,
 .add-to-wishlist {
-    padding: 15px;
+    padding: 8px;
     font-size: 1.2rem;
     border: 1px solid #000;
     cursor: pointer;
@@ -231,17 +231,19 @@
     fill: gold;
 }
 video{
-    width: 61%;
-    margin-left: 7.9vw;
+  width: 98%;
+  margin-left: 0.9vw;
+  height: 65vh !important;
+
 }
 .product-detail_2{
-    width:80%;
+ 
     margin:0 auto;
     background-color: #f4f4f4 ;
 }
 .cosmetics_section1{
     display:flex;
-    width: 63%;
+    width: 90%;
     margin:0 auto;
 }
 .cosmetics_section1 img{
@@ -250,7 +252,7 @@ video{
     margin-left:1px;
 }
 h2{
-    font-size: 4rem;
+    font-size: 2rem;
     color:#141414;
     font-weight: 700;
     text-align: center;
@@ -258,15 +260,15 @@ h2{
 }
 .video_pop3{
    
-   margin-left: 19.66vw;
-    width: 50.35%;
+   margin-left: 5vw;
+    width: 90%;
     margin-bottom: 14vw;
     /* margin-left: 9.95vw;
     width: 80%;*/
 }
 .cosmetics_type{
-    padding:9vw;
-    line-height: 2.2vw;
+  padding: 20vw 0 0vw;
+    line-height: 5.2vw;
 }
 .product-detail_2 h3{
    font-size: 3rem;
@@ -298,7 +300,6 @@ h2{
     background-color: #f4f4f4;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    width: 80%;
       margin: 0 auto;
   }
   
@@ -313,13 +314,14 @@ h2{
     flex-direction: column;
     gap: 20px;
     align-items: center;
+    width:100%;
   }
   
   .review {
     background-color: #fff;
-    padding: 15px;
+    padding: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width:80%;
+    width:100%;
   }
   
   .review-header {
@@ -332,7 +334,9 @@ h2{
   .review-rating {
     margin-top: 10px;
   }
-  
+  #review-rating{
+    width:100%;
+  }
   .review-text {
     margin-top: 10px;
     color: #555;
@@ -344,7 +348,7 @@ h2{
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 80%;
+    width: 100%;
   }
   
   .add-review h3 {
@@ -390,6 +394,5 @@ h2{
     font-size: 0.9rem;
     font-weight: 500;
   }
-
 
 }
