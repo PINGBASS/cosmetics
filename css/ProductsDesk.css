@@ -1,6 +1,10 @@
 
 @media screen and (min-width:1023px){
-.content_img img{
+body{
+    background-color: #fff !important;
+}
+
+    .content_img img{
     width:100%;
 }
 

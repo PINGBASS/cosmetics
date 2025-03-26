@@ -54,9 +54,9 @@
     margin: 0;
   }
   .info-section p{
-    line-height: 1.2vw;
-    padding:1.5vw;
-    font-size: 0.85rem;
+    line-height: 6.2vw;
+        padding: 1.5vw;
+        font-size: 0.7rem;
   }
   .box-header h3{
     font-weight: 500;

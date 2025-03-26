@@ -72,11 +72,7 @@
     display: none;
     }
     
-    .navbar_logo li {
-        display: inline-block;
-    margin: 0 15px;
-    }
-    
+
     .navbar_logo li a {
         text-decoration: none;
         color: #bababa;
@@ -121,9 +117,7 @@
     
     
     .submenu li a {
-   font-size: 1.5em;
-        margin-bottom: 36px;
-        margin-top: 6vw;
+   font-size: 1em;
     }
     
     .submenu li a:hover {
