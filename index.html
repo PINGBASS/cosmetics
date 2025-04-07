@@ -14,7 +14,17 @@
   
 </head>
 <body>
+    
     <div id="wrap">
+        <div class="welcome_modal" id="welcomeModal">
+            <div class="welcome_modal_content" id="modalContent">
+              <span class="close_btn" id="closeModal">&times;</span>
+              <h2>서브페이지 안내해드려요!</h2>
+              <p>products에서 lip 을 클릭해주세요.</p>
+              <button id="modalOk">확인</button>
+            </div>
+          </div>
+        
         <!--네비-->
         <div class="header_top_sale"> 신규고객 전품목 20% 할인</div>
         
@@ -37,7 +47,7 @@
                     <a href="#">Products</a>
                     <ul class="submenu">
                         <li><a href="#">New Arrivals</a></li>
-                        <li><a href="#">Lip</a></li>
+                        <li><a href="html/lipstick-page.html">Lip</a></li>
                         <li><a href="#">Eye</a></li>
                         <li><a href="#">BLUSHER</a></li>
                         <li><a href="#">CUSHION</a></li>
@@ -267,4 +277,28 @@
      
     
 </body>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const modal = document.getElementById('welcomeModal');
+    const closeBtn = document.getElementById('closeModal');
+    const okBtn = document.getElementById('modalOk');
+    const modalContent = document.getElementById('modalContent');
+
+    // 닫는 함수
+    function closeModal() {
+      modal.style.display = 'none';
+    }
+
+    // X 버튼과 확인 버튼으로 닫기
+    closeBtn.addEventListener('click', closeModal);
+    okBtn.addEventListener('click', closeModal);
+
+    // 바깥쪽 클릭 시 모달 닫기
+    modal.addEventListener('click', function (e) {
+      if (!modalContent.contains(e.target)) {
+        closeModal();
+      }
+    });
+  });
+  </script>
 </html>

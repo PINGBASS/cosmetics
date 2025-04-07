@@ -37,6 +37,7 @@
     width: 50%;
     height: 900px;
     overflow-y: scroll; 
+    background-color: #ccc;
    
 }
 
@@ -197,7 +198,7 @@ h2{
 }
 .video_pop3{
    
-    margin-left: 24.66vw;
+    margin-left: 19.66vw;
     width: 50.35%;
     margin-bottom: 14vw;
     

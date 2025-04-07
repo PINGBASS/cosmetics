@@ -13,6 +13,16 @@
     <link rel="stylesheet" href="../indexDesk.css">
 </head>
 <body>
+
+    <div class="welcome_modal" id="welcomeModal">
+        <div class="welcome_modal_content" id="modalContent">
+          <span class="close_btn" id="closeModal">&times;</span>
+          <h2>서브페이지-2 안내해드려요!</h2>
+          <p>첫번째 제품 3CE LAZY POP LIP 를 클릭해주세요!</p>
+          <button id="modalOk">확인</button>
+        </div>
+      </div>
+    
     <div class="header_top_sale"> 신규고객 전품목 20% 할인</div>
         
     <header >
@@ -523,4 +533,28 @@
     </footer>
 </body>
 <script src="../js/cosmetics.js" ></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const modal = document.getElementById('welcomeModal');
+    const closeBtn = document.getElementById('closeModal');
+    const okBtn = document.getElementById('modalOk');
+    const modalContent = document.getElementById('modalContent');
+
+    // 닫는 함수
+    function closeModal() {
+      modal.style.display = 'none';
+    }
+
+    // X 버튼과 확인 버튼으로 닫기
+    closeBtn.addEventListener('click', closeModal);
+    okBtn.addEventListener('click', closeModal);
+
+    // 바깥쪽 클릭 시 모달 닫기
+    modal.addEventListener('click', function (e) {
+      if (!modalContent.contains(e.target)) {
+        closeModal();
+      }
+    });
+  });
+  </script>
 </html>

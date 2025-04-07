@@ -320,22 +320,22 @@ const indicators5 = document.querySelectorAll('.indicator');
 
 let currentIndex5 = 0;
 
-// 동그라미 색상 변경 (이미지 슬라이드)
+
 document.querySelector('.product-images').addEventListener('scroll', () => {
     const scrollPosition = document.querySelector('.product-images').scrollLeft; // scrollLeft로 변경
     const imageWidth = images5[0].clientWidth; // 이미지의 너비로 변경
 
     // 이미지 크기에 맞춰 현재 스크롤 위치로 계산
-    const index = Math.floor(scrollPosition / imageWidth); // 세로가 아닌 가로 기준으로 인덱스 계산
+    const index = Math.floor(scrollPosition / imageWidth); 
 
     if (index !== currentIndex5) {
-        indicators5[currentIndex5].style.backgroundColor = '#ccc'; // 기존 색상
-        indicators5[index].style.backgroundColor = '#999'; // 새로운 색상
-        currentIndex5 = index; // 현재 인덱스 업데이트
+        indicators5[currentIndex5].style.backgroundColor = '#ccc'; 
+        indicators5[index].style.backgroundColor = '#999'; 
+        currentIndex5 = index; 
     }
 });
 
-// 위시리스트 아이콘 클릭 시 메시지
+
 const wishlistIcon5 = document.querySelector('.wishlist-icon');
 const wishlistMessage5 = document.querySelector('.wishlist-message');
 
@@ -346,7 +346,7 @@ wishlistIcon5.addEventListener('click', () => {
     }, 3000);
 });
 
-// 장바구니 버튼 클릭 시 메시지
+
 const addToCartButton5 = document.querySelector('.add-to-cart');
 const cartMessage5 = document.querySelector('.cart-message');
 
@@ -357,10 +357,13 @@ addToCartButton5.addEventListener('click', () => {
     }, 3000);
 });
 
-// 위시리스트 아이콘 클릭 시 색상 변경 (클래스 토글)
+
 wishlistIcon5.addEventListener('click', () => {
-    wishlistIcon5.classList.toggle('active'); // 클릭 시 .active 클래스를 토글하여 색상 변경
+    wishlistIcon5.classList.toggle('active'); 
 });
 
+
+
+/**/
 
 
