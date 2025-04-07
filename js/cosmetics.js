@@ -364,7 +364,7 @@ wishlistIcon5.addEventListener('click', () => {
 
 
 
-/**/
+
 
 
 // 바깥을 클릭하여 열린 박스 닫기
