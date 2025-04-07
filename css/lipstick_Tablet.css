@@ -211,9 +211,8 @@ footer {
     padding: 20px;
     text-align: center;
     font-size: 14px;
-    width:80%;
     margin:0 auto;
-    height: 40vh;
+   
   }
   
   .footer-container {
@@ -267,7 +266,7 @@ footer {
   }
   .footer-all{
     display:flex;
-    gap: 9.6vw;
+    flex-direction: column;
   }
   .dropdown {
     position: relative;
@@ -455,10 +454,10 @@ footer {
     color: #ff0000;  /* 빨간색 */
     font-weight: bold;
     background: #333;
-    height: 4vh;
+    height: 3vh;
     /* width: 9vw; */
     color: #ffffff;
-    line-height: 1.8vw;
+    line-height: 4vw;
 }
 
 /* 립스틱 이름 */
@@ -484,7 +483,10 @@ footer {
     justify-content: center;
     margin-top: 5.4vw;
 }
-
+.filters h2{
+  font-size: 4rem;
+  margin-bottom: 3vw;
+}
 /* 필터의 각 항목 */
 .filter {
     display: flex;
@@ -540,12 +542,12 @@ footer {
 
 .icon{
     display:flex;
-    justify-content: flex-start;
     gap:1vw;
-    margin-left:8vw;
+    justify-content: center;
+    gap:1.5vw;
 }
 .icon img{
-    width:2.2vw;
+    width:6vw;
     opacity: 80%;
 }
 .icon img:hover{
@@ -594,6 +596,17 @@ footer {
 
 .menu-icon{
     display:none;
+}
+
+.footer-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-section ul{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 }
 

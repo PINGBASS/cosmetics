@@ -1,14 +1,7 @@
 
-@media screen and (min-width:1023px){
-body{
-    background-color: #fff !important;
-}
-
-    .content_img img{
+@media screen and  (min-width:375px) and (max-width:767px){
+.content_img img{
     width:100%;
-}
-.submenu {
-  background-color: #6d2eff !important;
 }
 
 /*상세.전성분===================================*/
@@ -18,26 +11,28 @@ body{
     font-weight: 500;
 }
 .product-info {
-    width: 80%;
+  margin-top: 76vw;
     margin: 0 auto;
     text-align: center;
     background-color: #f1f1f1;
+    
   }
   .info-section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
   }
   .info-box {
-    width: 70%;
+    width: 88%;
     margin-bottom: 10px;
     background-color: #f9f9f9;
-    border: 3px solid #ffffff;
+    border: 5px solid #ffffff;
     border-radius: 5px;
   }
   .box-header {
     display: flex;
-    padding: 10px;
+    padding: 8px;
     background-color: #f1f1f1;
     cursor: pointer;
     position: relative;
@@ -53,27 +48,25 @@ body{
   }
   .box-header.active h3{
     color:#000000;
-    font-weight: 600;
-    font-size: 1.2rem;
+    font-weight: 500;
   }
   .box-content p {
     margin: 0;
   }
   .info-section p{
-    line-height: 1.2vw;
-    padding:1.5vw;
-    font-size: 0.98rem;
-    font-weight: 500;
+    line-height: 6.2vw;
+        padding: 1.5vw;
+        font-size: 0.7rem;
   }
   .box-header h3{
-    font-weight: 600;
-        font-size: 1rem;
-    color: #010101;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #404040;
   }
   .product-info h5{
     font-weight: 600;
     font-size: 1.5rem;
-    padding: 8vw;
+    padding: 25vw;
     color: #0d0d0d;
   }
   .box-header.active {
@@ -87,11 +80,11 @@ body{
 
 .product-detail {
     display: flex;
-    width: 80%;
     margin: 0 auto;
     justify-content: center;
-    margin-top: 7.5vw;
+    margin-top: 14.5vw;
     background-color: #f4f4f4 ;
+    height: 100vh;
 }
 .image-indicators {
     display: flex;
@@ -108,9 +101,8 @@ body{
 }
 .product-images {
     width: 50%;
-    height: 900px;
+    height: 669px;
     overflow-y: scroll; 
-   
 }
 .product-images img {
     width: 100%;
@@ -122,15 +114,16 @@ body{
 }
 .product-description {
     width: 50%;
-    padding: 20px;
+    padding: 10px 10px 10px 0px;
     background-color: #f4f4f4;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .product-description h1 {
-    font-size: 2.42em;
-    margin-bottom: 84px;
+  font-size: 1.5em;
+  margin-bottom: 36px;
+  margin-top: 6vw;
 }
 
 .product-description .reference,
@@ -143,17 +136,22 @@ body{
     color: #007bff;
     text-decoration: none;
     margin-bottom: 20px;
+    font-size: 0.75rem;
 }
 .price_button {
-    width: 12.5vw;
+    width:44vw;
     height: 4vh;
+    font-size: 0.7rem;
+}
+.color-selection label{
+  font-size: 0.7rem;
 }
 .product-line {
     width: 90%;
     height: 1px;
     background-color: #000;
-    margin-top: 2.3vw;
-    margin-bottom: 1.5vw;
+    margin-top: 5.5vw;
+    margin-bottom: 3.5vw;
 }
 
 .color-selection {
@@ -168,7 +166,7 @@ body{
 
 .color-selection .color {
     width: 40px;
-    height: 40px;
+    height: 25px;
     cursor: pointer;
     transition: transform 0.3s ease;
 }
@@ -181,25 +179,25 @@ body{
     display: flex;
     justify-content: space-between;
     gap: 10px;
+    border-radius: 4px;
 }
 
 .add-to-cart,
 .add-to-wishlist {
-  padding: 15px;
-  font-size: 1rem;
-  border: 1px solid #000;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  width: 90%;
-  margin-top: 0.6vw;
-  margin-bottom: 2vw;
-  height: 5vh;
-  line-height: 1vw;
+    padding: 8px;
+    font-size: 0.7rem;
+    border: 1px solid #000;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 90%;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
 }
 
 .add-to-cart {
     background-color: #e7e7e7;
     color: rgb(39, 39, 39);
+    width:44vw;
 }
 
 .add-to-cart:hover {
@@ -221,7 +219,7 @@ body{
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 80%;
+    width: 100%;
     background-color: #ffffff;
     color: #000000;
     border: 1px solid #000000;
@@ -230,7 +228,9 @@ body{
     text-align: center;
     display: none;
 }
-
+.wishlist{
+  font-size: 0.8rem;
+}
 .wishlist-icon1 {
     width: 30px;
     height: 30px;
@@ -243,17 +243,20 @@ body{
     fill: gold;
 }
 video{
-    width: 61%;
-    margin-left: 7.9vw;
+  width: 98%;
+  margin-left: 0.9vw;
+  height: 65vh !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-top:1vw;
 }
 .product-detail_2{
-    width:80%;
+ 
     margin:0 auto;
     background-color: #f4f4f4 ;
 }
 .cosmetics_section1{
     display:flex;
-    width: 63%;
+    width: 90%;
     margin:0 auto;
 }
 .cosmetics_section1 img{
@@ -262,62 +265,57 @@ video{
     margin-left:1px;
 }
 h2{
-    font-size: 4rem;
+ 
     color:#141414;
     font-weight: 700;
     text-align: center;
-    padding:6vw;
+    padding: 5vw;
 }
-.video_pop3{
-   
-    margin-left: 24.66vw;
-    width: 50.35%;
-    margin-bottom: 14vw;
-    /* margin-left: 9.95vw;
-    width: 80%;*/
-}
+
 .cosmetics_type{
-    padding:9vw;
-    line-height: 2.2vw;
+  padding: 13vw;
+  line-height: 8.2vw;
+  
 }
 .product-detail_2 h3{
-   font-size: 3rem;
+   font-size: 2rem;
    color:#000;
    font-weight: 700;
    text-align: center;
 }
 
 .product-detail_2 h5{
-    font-size: 1.6rem;
+    font-size: 1.2rem;
    color:#000;
    font-weight: 400;
    text-align: center;
-   margin-top: 0.4vw;
+   margin-top: 0.7vw;
 }
 
 .product-detail_2 p{
-    font-size: 1rem;
+    font-size: 0.8rem;
    color:#000;
    font-weight: 600;
    text-align: center;
    margin-top:0.2vw;
+   line-height: 6vw;
+   margin-top: 2vw;
 }
 
 /*사용후기*/
 
 .reviews-section {
-    padding: 40px;
+    padding: 19px;
     background-color: #f4f4f4;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    width: 80%;
       margin: 0 auto;
   }
   
   .reviews-section h2 {
-    font-size: 28px;
+    font-size: 21px;
     color: #333;
-    margin-bottom: 38px;
+    margin-bottom: 19px;
   }
   
   .review-container {
@@ -325,13 +323,14 @@ h2{
     flex-direction: column;
     gap: 20px;
     align-items: center;
+    width:100%;
   }
   
   .review {
     background-color: #fff;
-    padding: 15px;
+    padding: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width:80%;
+    width:100%;
   }
   
   .review-header {
@@ -344,11 +343,13 @@ h2{
   .review-rating {
     margin-top: 10px;
   }
-  
+  #review-rating{
+    width:100%;
+  }
   .review-text {
     margin-top: 10px;
     color: #555;
-    font-size: 13.5px;
+    font-size: 12px;
   }
   
   .add-review {
@@ -356,11 +357,11 @@ h2{
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 80%;
+    width: 100%;
   }
   
   .add-review h3 {
-    font-size: 1.15rem;
+    font-size: 1rem;
     margin-bottom: 15px;
   }
   
@@ -368,7 +369,7 @@ h2{
     display: block;
     margin: 8px 0;
     font-weight: 400;
-    font-size: 0.85rem;
+    font-size: 0.7rem;
   }
   
   .add-review form input,
@@ -395,13 +396,12 @@ h2{
     background-color: #555;
   }
   .review-date{
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: 400;
   }
   .reviewer-name{
     font-size: 0.9rem;
     font-weight: 500;
   }
-
 
 }

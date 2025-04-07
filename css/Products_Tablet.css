@@ -1,14 +1,7 @@
 
-@media screen and (min-width:1023px){
-body{
-    background-color: #fff !important;
-}
-
-    .content_img img{
+@media screen and  (min-width:768px) and (max-width:1022px){
+.content_img img{
     width:100%;
-}
-.submenu {
-  background-color: #6d2eff !important;
 }
 
 /*상세.전성분===================================*/
@@ -18,7 +11,7 @@ body{
     font-weight: 500;
 }
 .product-info {
-    width: 80%;
+   
     margin: 0 auto;
     text-align: center;
     background-color: #f1f1f1;
@@ -32,7 +25,7 @@ body{
     width: 70%;
     margin-bottom: 10px;
     background-color: #f9f9f9;
-    border: 3px solid #ffffff;
+    border: 5px solid #ffffff;
     border-radius: 5px;
   }
   .box-header {
@@ -53,8 +46,7 @@ body{
   }
   .box-header.active h3{
     color:#000000;
-    font-weight: 600;
-    font-size: 1.2rem;
+    font-weight: 500;
   }
   .box-content p {
     margin: 0;
@@ -62,16 +54,15 @@ body{
   .info-section p{
     line-height: 1.2vw;
     padding:1.5vw;
-    font-size: 0.98rem;
-    font-weight: 500;
+    font-size: 0.85rem;
   }
   .box-header h3{
-    font-weight: 600;
-        font-size: 1rem;
-    color: #010101;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #404040;
   }
   .product-info h5{
-    font-weight: 600;
+    font-weight: 400;
     font-size: 1.5rem;
     padding: 8vw;
     color: #0d0d0d;
@@ -87,11 +78,11 @@ body{
 
 .product-detail {
     display: flex;
-    width: 80%;
     margin: 0 auto;
     justify-content: center;
-    margin-top: 7.5vw;
+    margin-top: 14.5vw;
     background-color: #f4f4f4 ;
+    height: 65vh;
 }
 .image-indicators {
     display: flex;
@@ -108,9 +99,8 @@ body{
 }
 .product-images {
     width: 50%;
-    height: 900px;
+    height: 669px;
     overflow-y: scroll; 
-   
 }
 .product-images img {
     width: 100%;
@@ -129,8 +119,8 @@ body{
 }
 
 .product-description h1 {
-    font-size: 2.42em;
-    margin-bottom: 84px;
+    font-size: 2em;
+    margin-bottom: 36px;
 }
 
 .product-description .reference,
@@ -152,8 +142,8 @@ body{
     width: 90%;
     height: 1px;
     background-color: #000;
-    margin-top: 2.3vw;
-    margin-bottom: 1.5vw;
+    margin-top: 3.5vw;
+    margin-bottom: 3.5vw;
 }
 
 .color-selection {
@@ -185,16 +175,14 @@ body{
 
 .add-to-cart,
 .add-to-wishlist {
-  padding: 15px;
-  font-size: 1rem;
-  border: 1px solid #000;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  width: 90%;
-  margin-top: 0.6vw;
-  margin-bottom: 2vw;
-  height: 5vh;
-  line-height: 1vw;
+    padding: 8px;
+    font-size: 1.2rem;
+    border: 1px solid #000;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 90%;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
 }
 
 .add-to-cart {
@@ -243,17 +231,19 @@ body{
     fill: gold;
 }
 video{
-    width: 61%;
-    margin-left: 7.9vw;
+  width: 98%;
+  margin-left: 0.9vw;
+  height: 65vh !important;
+
 }
 .product-detail_2{
-    width:80%;
+ 
     margin:0 auto;
     background-color: #f4f4f4 ;
 }
 .cosmetics_section1{
     display:flex;
-    width: 63%;
+    width: 90%;
     margin:0 auto;
 }
 .cosmetics_section1 img{
@@ -262,7 +252,7 @@ video{
     margin-left:1px;
 }
 h2{
-    font-size: 4rem;
+    font-size: 2rem;
     color:#141414;
     font-weight: 700;
     text-align: center;
@@ -270,15 +260,15 @@ h2{
 }
 .video_pop3{
    
-    margin-left: 24.66vw;
-    width: 50.35%;
+   margin-left: 5vw;
+    width: 90%;
     margin-bottom: 14vw;
     /* margin-left: 9.95vw;
     width: 80%;*/
 }
 .cosmetics_type{
-    padding:9vw;
-    line-height: 2.2vw;
+  padding: 20vw 0 0vw;
+    line-height: 5.2vw;
 }
 .product-detail_2 h3{
    font-size: 3rem;
@@ -310,7 +300,6 @@ h2{
     background-color: #f4f4f4;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    width: 80%;
       margin: 0 auto;
   }
   
@@ -325,13 +314,14 @@ h2{
     flex-direction: column;
     gap: 20px;
     align-items: center;
+    width:100%;
   }
   
   .review {
     background-color: #fff;
-    padding: 15px;
+    padding: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width:80%;
+    width:100%;
   }
   
   .review-header {
@@ -344,7 +334,9 @@ h2{
   .review-rating {
     margin-top: 10px;
   }
-  
+  #review-rating{
+    width:100%;
+  }
   .review-text {
     margin-top: 10px;
     color: #555;
@@ -356,7 +348,7 @@ h2{
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 80%;
+    width: 100%;
   }
   
   .add-review h3 {
@@ -402,6 +394,5 @@ h2{
     font-size: 0.9rem;
     font-weight: 500;
   }
-
 
 }

@@ -367,3 +367,46 @@ wishlistIcon5.addEventListener('click', () => {
 /**/
 
 
+// 바깥을 클릭하여 열린 박스 닫기
+document.addEventListener('click', function(event) {
+    const isClickInside = event.target.closest('.info-box');
+    
+    if (!isClickInside) {
+      const allContents = document.querySelectorAll('.box-content');
+      const allCircles = document.querySelectorAll('.circle');
+      const allHeaders = document.querySelectorAll('.box-header');
+  
+      allContents.forEach(content => content.style.display = 'none');
+      allCircles.forEach(circle => {
+        circle.classList.remove('open');  //꽉 찬 동그라미 상태 제거
+        circle.classList.add('empty');   //빈 동그라미 상태 추가
+      });
+      allHeaders.forEach(header => {
+        header.classList.remove('active');  // 버튼색 원래상태로 
+      });
+    }
+  });
+  
+  // 설명토글 전성분.
+  function toggleContent(contentId, boxHeader) {
+    const boxContent = document.getElementById(contentId);
+    
+    // 모든창을숨기고클릭한창만 열기
+    const allContents = document.querySelectorAll('.box-content');
+    const allHeaders = document.querySelectorAll('.box-header');
+    allContents.forEach(content => {
+      content.style.display = 'none';
+    });
+  
+    // 클릭된창만열리고색상변경
+    if (boxContent.style.display === 'block') {
+      boxContent.style.display = 'none';
+      boxHeader.classList.remove('active');  //색원래
+    } else {
+      //색상리셋
+      allHeaders.forEach(header => header.classList.remove('active'));
+      boxHeader.classList.add('active');  //클릭색상 변경
+      boxContent.style.display = 'block';
+    }
+  }
+  

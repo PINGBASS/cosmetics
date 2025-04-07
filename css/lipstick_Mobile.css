@@ -69,13 +69,10 @@
         display: flex;
         flex-direction: row;
     align-items: center;
+    display: none;
     }
     
-    .navbar_logo li {
-        display: inline-block;
-    margin: 0 15px;
-    }
-    
+
     .navbar_logo li a {
         text-decoration: none;
         color: #bababa;
@@ -109,7 +106,7 @@
     background-color: #e7690c;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
-    padding: 20px 0;
+    
     }
     
     
@@ -120,9 +117,7 @@
     
     
     .submenu li a {
-    font-size: 1rem;
-    color: #ffffff;
-    transition: color 0.3s ease;
+   font-size: 1em;
     }
     
     .submenu li a:hover {
@@ -274,7 +269,7 @@ h4{
 .lipstick-item {
     text-align: center;
     width:100%;
-    height:40vh;
+    height:43vh;
 }
 
 
@@ -305,94 +300,83 @@ h4{
     height: 4vh;
     /* width: 9vw; */
     color: #ffffff;
-    line-height: 1.8vw;
+    line-height: 6.8vw;
 }
-
+.filter p{
+    margin-right: 11vw;
+    margin-top: 4vw;
+}
 
 .lipstick-name {
     font-size: 16px;
     font-weight: bold;
     margin-bottom: 5px;
 }
-
-
+.filters h2{
+    font-size: 4rem;
+    margin-bottom: 5vw;
+    margin-left: 22vw;
+}
+.fillters p{
+    margin-top: 2vw;
+}
 .lipstick-color {
     font-size: 14px;
     color: #666;  
 }
-
-
 .filters {
     display: flex;
     justify-content: space-between;
-    margin: 20px 0;
+    margin: 25px 0;
     padding: 0 20px;
     flex-wrap: wrap; 
-    justify-content: center;
     margin-top: 5.4vw;
+    justify-content: space-between
 }
-
-
 .filter {
     display: flex;
     align-items: center;
-     flex-wrap: wrap;
-    
+    flex-wrap: wrap;
+    justify-content: space-around
 }
-
-
 .filter label {
     font-size: 18px;
     margin-right: 10px; 
     font-weight: bold;
 }
-
-
 .filter-button {
     background-color: transparent;
     border: 2px solid #000;  
-    padding: 10px 20px;
+    padding: 8px 20px;
     font-size: 16px;
     color: #000; 
     cursor: pointer;
     transition: all 0.3s ease;
 }
-
-
 .filter-button:hover {
     background-color: #000;
     color: #fff;
 }
-
-
 .filter-button.active {
     background-color: #000;
     color: #fff;
 }
-
-
 .filter-button[data-color="pink"].active {
     border-color: pink;
 }
-
 .filter-button[data-color="red"].active {
     border-color: red;
 }
-
 .filter-button[data-color="purple"].active {
     border-color: purple;
 }
-
-
-
 .icon{
     display:flex;
-    justify-content: flex-start;
-    gap:1vw;
-    margin-left:8vw;
+    gap:2vw;
+    justify-content: center;
 }
 .icon img{
-    width:2.2vw;
+    width:8.2vw;
     opacity: 80%;
 }
 .icon img:hover{
@@ -400,15 +384,4 @@ h4{
     filter: grayscale(100%) brightness(50%);
 }
 
-
-
-
-
-
-
-
-
-.menu-icon{
-    display:none;
-}
 }

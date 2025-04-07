@@ -388,7 +388,7 @@ margin:0 auto;
 
 }
 .button_2{
-  width: 25vw;
+  width: 14vw;
   height: 5.5vh;
   background:#f3591a;
   border:none;
@@ -615,8 +615,12 @@ footer {
 }
 .image-container img {
     width: 100%;
+<<<<<<< HEAD
     height: 100%;
     -o-object-fit: cover;
+=======
+
+>>>>>>> 7dd05eff45b360b6fdf9536e1c893361c8f7ef6d
     object-fit: cover;
     position: absolute;
     top: 0;
